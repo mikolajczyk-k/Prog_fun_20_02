@@ -1,0 +1,2 @@
+def zadanie4():
+    
