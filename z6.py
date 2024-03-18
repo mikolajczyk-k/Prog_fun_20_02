@@ -1,6 +1,9 @@
-def zadanie6(lista):
-
+def zadanie6(numList):
     print("_____ZADANIE6_____")
-    y = lambda x: x**2
+    print("(to samo co w zadaniu 5)")
 
-    return print(str(list(map(y, lista))))
+    numList = list(map(lambda x: x**2, numList))
+
+    print(numList)
+
+    return numList

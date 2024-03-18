@@ -1,11 +1,10 @@
 import timeit
 
+def startTiming():
+    return timeit.default_timer()
 
-def timeIt(startTime):
-
+def zadanie4():
     print("_____ZADANIE4_____")
+    start = startTiming()
 
-    def calculateTime(startTime):
-        return startTime - timeit.timeit()
-    
-    return print("Time elapsed: "+str(calculateTime(startTime)))
+    return print("The elapsed time is: ", str(timeit.default_timer()-start))

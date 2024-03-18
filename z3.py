@@ -1,9 +1,13 @@
-def filterEvenNumbers(list):
+
+def zadanie3(list):
     print("_____ZADANIE3_____")
 
-    evenList = []
-    for x in list:
-        if x%2 == 0:
-            evenList.append(x)
+    def filterEvenNumbers(list):
+        evenList = []
+        for x in list:
+            if x%2 == 0:
+                evenList.append(x)
 
-    return print(str(evenList))
+        return evenList
+    return print(filterEvenNumbers(list))
+    

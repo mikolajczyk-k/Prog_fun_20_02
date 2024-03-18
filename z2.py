@@ -1,9 +1,12 @@
 
-def multiplyNum(x, y):
-    return x*y
-
-def make_Multiplier(x):
-
+def zadanie2(x):
     print("_____ZADANIE2_____")
-    y = int(input("Podaj mnożnik: "))
-    return print(str(multiplyNum(x, y)))
+    print("Multiplier: 4")
+
+    def multiplyBy4(x):
+        return x*4
+
+    def make_Multiplier(x):
+        return multiplyBy4(x)
+    
+    return print(make_Multiplier(x))

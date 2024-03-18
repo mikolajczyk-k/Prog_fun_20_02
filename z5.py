@@ -1,9 +1,4 @@
-
-def squareList(list):
+def zadanie5(numList):
     print("_____ZADANIE5_____")
-    sqrList = []
-    for x in list:
-        s = lambda x: x**2
-        sqrList.append(s(x))
 
-    return print(str(sqrList))
+    return print(list(map(lambda x: x**2, numList)))
