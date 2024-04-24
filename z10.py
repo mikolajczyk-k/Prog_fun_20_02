@@ -1,17 +1,7 @@
-def cumulativeSum(lst):
-    cumulative = []
-    total = 0 
-
-    for item in lst:
-        total+=item
-        cumulative.append(total)
-
-    return cumulative
-
-
-
+from itertools import permutations
 
 def zadanie10(lst):
     print("_____ZADANIE10_____")
 
-    return print(cumulativeSum(lst))
+    result = list(permutations(lst))
+    return print(result)

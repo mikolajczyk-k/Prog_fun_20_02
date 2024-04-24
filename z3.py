@@ -1,14 +1,5 @@
-def recursiveSum(numList):
-    result = 0
-    for item in numList:
-        if isinstance(item, list):
-            result += recursiveSum(item)
-        else:
-            result += item
-
-    return result
-
-def zadanie3(numList):
+def zadanie3(dict):
     print("_____ZADANIE3_____")
 
-    return print(recursiveSum(numList))
+    filteredDict = {key: value for key, value in dict.items() if isinstance(value, int) and value % 2 == 0}
+    return print(filteredDict)

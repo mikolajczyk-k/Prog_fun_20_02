@@ -1,19 +1,30 @@
-def flattenList(lst):
-    flat = []
-    for item in lst:
-        if isinstance(item, list):
-            flat.extend(flattenList(item))
-        else: 
-            flat.append(item)
-    return flat
+from collections import defaultdict
 
+def combineValues(v1, v2):
+    if isinstance(v1, int) and isinstance(v2, int):
+        return v1+v2
+    elif isinstance(v1, str) and isinstance(v2, str):
+        return v1+v2
+    elif isinstance(v1, list) and isinstance(v2, list):
+        return v1+v2
     
-            
+    else:
+        raise ValueError("Mismatched or missing values")
 
 
-def zadanie7(lst):
+def zadanie7(*dicts):
     print("_____ZADANIE7_____")
 
-    flattenList(lst)
+    combined = defaultdict(lambda: None)
 
-    return print(flattenList(lst))
+    for dictionary in dicts:
+        for key, value in dictionary.items():
+            if combined[key] is None:
+                combined[key] = value
+            else:
+                combined[key] = combineValues(combined[key], value)
+
+    return print(dict(combined))
+
+
+

@@ -1,13 +1,9 @@
-
-def zipWithIndex(lst):
-    indexList= []
-
-    for i in range(len(lst)):
-        indexList.append(i)
-    
-    return list(zip(indexList, lst))
-
-def zadanie9(lst):
+def zadanie9(lst, func):
     print("_____ZADANIE9_____")
 
-    return print(zipWithIndex(lst))
+    result = []
+    for item in lst:
+        if isinstance(item, tuple):
+            for i in item:
+                result.append(func(i,2))
+    return print(result)

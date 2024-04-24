@@ -1,21 +1,12 @@
-
-def zadanie5(n):
+def zadanie5(lst, maxLen):
     print("_____ZADANIE5_____")
 
-    if n < 0 or not isinstance(n, int):
-        return print("The number be positive and of type int.")
+    result = []
+    start = 0
 
-    def fibonacci():
-        a, b, = 0, 1
-        while True:
-            yield a
-            a, b = b, a + b
-        
-    gen = fibonacci()
-    
-    fibList = []
+    while start < len(lst):
+        result.append(lst[slice(start, start+maxLen)])
+        start+=maxLen
 
-    for _ in range(n):
-        fibList.append(next(gen))
+    return print(result)
 
-    return print(fibList)
